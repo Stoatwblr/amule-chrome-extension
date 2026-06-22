@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "aMule Link Integration Tool",
+  "version": "1.0.0",
+  "description": "Restores clickable individual ed2k links and adds multi-select queuing for aMule.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_title": "aMule Link Manager"
+  }
+}
